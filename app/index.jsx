@@ -257,7 +257,7 @@ function TodosCard() {
               />
               <Card.Actions>
                 <Button onPress={() => dispatch(toggleTodo(item.id))}>Done</Button>
-                <Button onPress={() => dispatch(removeTodo(item.id))} textColor="rgba(255, 254, 254, 1)" backgroundColor="rgba(255, 0, 0, 1)">
+                <Button onPress={() => dispatch(removeTodo(item.id))} textColor="rgba(255, 254, 254, 1)">
                   Remove
                 </Button>
               </Card.Actions>
