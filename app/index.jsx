@@ -256,17 +256,30 @@ function TodosCard() {
                 left={(props) => <Avatar.Icon {...props} icon="circle-outline" />}
               />
               <Card.Actions>
-                <Button onPress={() => dispatch(toggleTodo(item.id))}>Done</Button>
-                <Button onPress={() => dispatch(removeTodo(item.id))} textColor="rgba(255, 254, 254, 1)">
-                  Remove
-                </Button>
+                <Button 
+                      mode="contained" 
+                      buttonColor="rgba(42, 163, 82, 1)" 
+                      textColor="white" 
+                      onPress={() => dispatch(toggleTodo(item.id))}>Done</Button>
+                <Button 
+                      mode="contained" 
+                      buttonColor="rgba(204, 38, 38, 1)" 
+                      textColor="white" 
+                      onPress={() => dispatch(removeTodo(item.id))}
+                    >
+                      Remove
+                    </Button>
               </Card.Actions>
             </Card>
           )}
           ListEmptyComponent={<Text accessibilityLabel="Empty list">No todos yet. Add one above.</Text>}
         />
         {items.length > 0 && (
-          <Button style={{ marginTop: 8 }} onPress={() => dispatch(clearTodos())}>
+          <Button 
+                      mode="contained" 
+                      buttonColor="rgba(240, 91, 33, 1)" 
+                      textColor="white" 
+                      style={{ marginTop: 8 }} onPress={() => dispatch(clearTodos())}>
             Clear All
           </Button>
         )}
